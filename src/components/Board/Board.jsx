@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-globals */
+import { Link } from "react-router-dom";
 import React, { useState, useEffect, useContext } from "react";
 import "./loader.scss";
 import "./Board.scss";
 import { Pagination } from "../Pagination/Pagination";
-import { Link } from "react-router-dom";
 import { JobsContext } from "../../JobsContext";
 
 export const Board = () => {
@@ -31,7 +31,6 @@ export const Board = () => {
 
   return (
     <>
-      {window.scrollTo(0, 0)}
       {loading ? (
         <div className="loader">
           <div className="lds-roller"></div>

@@ -36,7 +36,7 @@ export const Pagination = ({ count }) => {
               return index === 1 
                 ? (
                   <li key={`Page-${index + 1}`}>
-                    <button className="navigation__number" autoFocus>
+                    <button className="navigation__number">
                       {index + 1}
                     </button>
                   </li>
