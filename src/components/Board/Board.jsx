@@ -31,6 +31,7 @@ export const Board = () => {
 
   return (
     <>
+      {window.scrollTo(0, 0)}
       {loading ? (
         <div className="loader">
           <div className="lds-roller"></div>
