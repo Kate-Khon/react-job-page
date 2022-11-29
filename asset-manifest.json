@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/react-job-page/static/css/main.9f344102.css",
+    "main.js": "/react-job-page/static/js/main.876766c5.js",
+    "static/js/787.cb049fd1.chunk.js": "/react-job-page/static/js/787.cb049fd1.chunk.js",
+    "static/media/Proxima Nova Font.otf": "/react-job-page/static/media/Proxima Nova Font.7bc9ce404c297c24f210.otf",
+    "index.html": "/react-job-page/index.html",
+    "static/media/button-arrow.svg": "/react-job-page/static/media/button-arrow.81b0f26cb6486aa14408.svg",
+    "main.9f344102.css.map": "/react-job-page/static/css/main.9f344102.css.map",
+    "main.876766c5.js.map": "/react-job-page/static/js/main.876766c5.js.map",
+    "787.cb049fd1.chunk.js.map": "/react-job-page/static/js/787.cb049fd1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9f344102.css",
+    "static/js/main.876766c5.js"
+  ]
+}
