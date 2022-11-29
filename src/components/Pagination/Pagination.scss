@@ -1,8 +1,19 @@
 $usual-color: #70778b;
 $hover-color: #55699e;
 
+@mixin onDesktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
 .navigation { 
   margin-bottom: 50px;
+
+  @include onDesktop {
+    margin-top: 49px;
+    margin-bottom: 64px;
+  }
 
   &__list {
     margin: auto;
@@ -15,6 +26,12 @@ $hover-color: #55699e;
     background-color: #f9fafd;
     box-shadow: 0 1px 2px 0 $usual-color;
     border-radius: 10px;
+
+    @include onDesktop {
+      width: 515px;
+      height: 52px;
+      font-size: 21px;
+    }
   }
 
   &__arrow {
@@ -42,6 +59,10 @@ $hover-color: #55699e;
   &__number {
     position: relative;
 
+    @include onDesktop {
+      width: 24px;
+    }
+
     &:focus {
       color: $hover-color;
       outline: 0;
@@ -53,6 +74,13 @@ $hover-color: #55699e;
         left: -6px;
         bottom: -8px;
         border-bottom: 2px solid;
+
+        @include onDesktop {
+          border-bottom: 3px solid;
+          right: -8px;
+          left: -8px;
+          bottom: -10px;
+        }
       }
     }
   }

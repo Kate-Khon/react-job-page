@@ -35,11 +35,7 @@ const App = () => {
     <>
       <JobsContext.Provider value={{ jobs }}>
         <Routes>
-          <Route path="/" element={() => {
-            console.log();
-            <Navigate to="/board" replace />
-          }} />
-          <Route path="/board">
+          <Route path="/">
             <Route index element={<Board />} />
 
               {jobs && (

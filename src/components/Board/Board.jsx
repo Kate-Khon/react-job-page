@@ -36,7 +36,7 @@ export const Board = () => {
           <div className="lds-roller"></div>
         </div>
       ) : (
-        <>
+        <div className="jobContainer">
           {contextJobs.jobs.map(job => {
             const daysAgo = getDays(job.createdAt);
 
@@ -94,7 +94,7 @@ export const Board = () => {
           })}
           
           <Pagination count={18} />
-        </>
+        </div>
        )
       }
     </>

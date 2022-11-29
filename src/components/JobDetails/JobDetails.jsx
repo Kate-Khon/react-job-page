@@ -1,8 +1,10 @@
 import './JobDetails.scss';
+import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { JobsContext } from '../../JobsContext';
 
 export const JobDetails = () => {
+  const navigate = useNavigate();
   const date = new Date();
   const contextJobs = useContext(JobsContext);
   const job = contextJobs.jobs.find(j => `vacancy-${j.id}` === 'vacancy-635ee6d304601d61a71951f6');
@@ -181,7 +183,10 @@ export const JobDetails = () => {
         />
       </div>
 
-      <button className="jobDetails__button jobDetails__returnButton">Return to job board</button>
+      <button 
+        className="jobDetails__button jobDetails__returnButton"
+        onClick={() => navigate(-1)}  
+      >Return to job board</button>
     </div>
   )
 }

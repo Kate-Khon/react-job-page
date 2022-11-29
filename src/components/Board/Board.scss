@@ -14,6 +14,12 @@ $text-details-color: #878d9d;
   color: $text-details-color;
 }
 
+.jobContainer {
+  @include onDesktop {
+    margin-top: 29px;
+  }
+}
+
 .position {
   margin: 9px auto;
 
