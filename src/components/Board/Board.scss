@@ -1,0 +1,199 @@
+$bg-color: #eff0f5;
+$text-color: #3a4562;
+$text-details-color: #878d9d;
+
+@mixin onDesktop {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+
+%details {
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  color: $text-details-color;
+}
+
+.position {
+  margin: 9px auto;
+
+  &:nth-child(20) {
+    margin-bottom: 26px;
+  }
+}
+
+.job {
+  position: relative;
+  padding: 16px;
+  width: 396px;
+  height: 206px;
+  color: $text-color;
+  background-color: $bg-color;
+  box-shadow: 0 1px 2px 0 $text-details-color;
+  border-radius: 8px;
+  cursor: pointer;
+
+  @include onDesktop {
+    width: 1400px;
+    height: 164px;
+    background-color: #fff;
+  }
+
+  &__image {
+    position: absolute;
+    top: 48px;
+    left: 25px;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+
+    @include onDesktop {
+      width: 85px;
+      height: 85px;
+      top: 24px;
+      left: 16px;
+    }
+  }
+
+  &__bookmark {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      position: absolute;
+      top: 29px;
+      right: 24px;
+    }
+  }
+
+  &__stars {
+    margin: 1px 0 0 101px;
+    display: inline-flex;
+
+    @include onDesktop {
+      position: absolute;
+      top: 73px;
+      right: 186px;
+    }
+  }
+
+  &__star {
+    margin-right: 1px;
+
+    @include onDesktop {
+      display: none;
+    }
+
+    &--desktop {
+      display: none;
+
+      @include onDesktop {
+        margin-right: 1px;
+        display: block;
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__creationDate {
+    @extend %details;
+
+    position: relative;
+    top: 0px;
+
+    margin-left: 42px;
+    font-weight: 300;
+    display: inline;
+    font-size: 16px;
+
+    @include onDesktop {
+      position: absolute;
+      top: auto;
+      right: 16px;
+      bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin: 8px 0 10px 101px;
+    max-width: 278px;
+    height: 48px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+
+    @include onDesktop {
+      display: none;
+      margin: 8px 5px 8px 111px;
+      max-width: 959px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    &:before {
+      content: '';
+      float: right;
+      width: 40px;
+      height: 20px;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include onDesktop {
+        display: block;
+        margin: 8px 5px 8px 111px;
+        max-width: 800px;
+        height: 49px;
+        line-height: 25px;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__details {
+    margin: 0 0 7px 101px;
+    max-width: 278px;
+    height: 48px;
+
+    @include onDesktop {
+      margin: 0 0 8px 111px;
+      max-width: 800px;
+      height: 25px;
+    }
+
+    &--country {
+      height: 25px;
+    }
+  }
+
+  &__name {
+    @extend %details;
+  }
+
+  &__bullet {
+    @extend %details;
+
+    font-size: 13px;
+  }
+
+  &__address {
+    @extend %details;
+  }
+
+  &__icon {
+    @extend %details;
+
+    margin: 0 9px 6px 0;
+    display: inline-block;
+  }
+
+  &__country {
+    @extend %details;
+  }
+}
