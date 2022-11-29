@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Board } from './components/Board/Board';
 import { JobDetails } from './components/JobDetails/JobDetails';
@@ -35,7 +35,7 @@ const App = () => {
     <>
       <JobsContext.Provider value={{ jobs }}>
         <Routes>
-          <Route path="/">
+          <Route path="/board">
             <Route index element={<Board />} />
 
               {jobs && (
